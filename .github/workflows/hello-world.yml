@@ -1,0 +1,16 @@
+name: Hello World Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run a one-line script
+      run: echo "Hello, world from a GitHub Action!"
+    - name: Run a multi-line script
+      run: |
+        echo "This is a multi-line script."
+        echo "We're saying hello from multiple lines!"
